@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo 3</title>
+</head>
+
+<body>
+    <button onclick="h1.show()">Göster</button>
+    <button onclick="h1.hide()">Gizle</button>
+
+    <button onclick="h1.toggle()">Gizle/Göster</button>
+
+    <h1>Merhaba, muratoner.net'e hoşgeldiniz.</h1>
+
+    <script>
+        HTMLElement.prototype.show = function () {
+            this.removeAttribute('hidden')
+        }
+
+        HTMLElement.prototype.hide = function () {
+            this.setAttribute('hidden', '')
+        }
+
+        HTMLElement.prototype.toggle = function () {
+            if (this.hasAttribute('hidden'))
+                this.removeAttribute('hidden')
+            else
+                this.setAttribute('hidden', '')
+        }
+
+        var h1 = document.querySelector('h1')
+    </script>
+</body>
+
+</html>

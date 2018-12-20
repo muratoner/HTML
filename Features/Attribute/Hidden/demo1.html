@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo 1</title>
+    <style>
+        .hide {
+            display: none
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="show()">Göster</button>
+    <button onclick="hide()">Gizle</button>
+    <h1 id="title">Merhaba, muratoner.net'e hoşgeldiniz.</h1>
+
+    <script>
+        function show() {
+            document.getElementById('title').classList.remove('hide')
+        }
+
+        function hide() {
+            document.getElementById('title').classList.add('hide')
+        }
+    </script>
+</body>
+
+</html>
